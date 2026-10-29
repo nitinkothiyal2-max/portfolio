@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nitin Kothiyal | Full Stack Developer & BCA Student</title>
+  <meta name="description" content="Portfolio of Nitin Kothiyal - Full Stack Developer and BCA student specializing in React, Node.js, Express, MongoDB, and modern web applications." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Ambient background gradients -->
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">NK</span>
+        <span class="logo-slash">/</span>
+        <span class="logo-bracket">&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <a href="#contact" class="btn btn-sm btn-primary hide-mobile">Let's Talk</a>
+
+        <button id="hamburger" class="hamburger" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-container">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Available for Internships & Projects</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Nitin Kothiyal</span><br />
+          <span class="typewriter" id="typewriter">Full Stack Developer</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          BCA student passionate about architecting scalable full-stack web applications, clean REST APIs, and delightful digital user experiences with modern tech stacks.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Projects</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Contact Me</span>
+          </a>
+          <a href="#resume" class="btn btn-ghost" id="resume-btn" onclick="alert('Tip: Replace with your actual resume PDF link in index.html!')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Resume</span>
+          </a>
+        </div>
+
+        <!-- Social Links Bar -->
+        <div class="hero-socials">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:nitinkothiyal@example.com" class="social-icon" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <span class="social-divider"></span>
+          <span class="terminal-tag">Full-Stack MERN & Next.js</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">About Me</p>
+          <h2 class="section-title">Driven by Curiosity & Code</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <h3>BCA Student</h3>
+            <p>
+              Pursuing a Bachelor of Computer Applications with deep curiosity for Data Structures, Algorithms, DBMS, and Software Engineering principles that fuel rock-solid applications.
+            </p>
+          </div>
+
+          <div class="about-card glass">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h3>Full Stack Mindset</h3>
+            <p>
+              I bridge intuitive, responsive UI interfaces with resilient backend logic, database optimization, authentication flows, and automated deployments.
+            </p>
+          </div>
+
+          <div class="about-card glass">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6z"/></svg>
+            </div>
+            <h3>Agile & Continuous Learner</h3>
+            <p>
+              Consistently exploring emerging developer tools, Next.js 14 server components, TypeScript, cloud deployments, and AI-assisted workflows to ship faster.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-stats glass">
+          <div class="stat-item">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">Years Coding</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Committed to Growth</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">Tech Stack</p>
+          <h2 class="section-title">Tools & Technologies I Work With</h2>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skill-category glass">
+            <div class="skill-header">
+              <div class="badge-icon frontend-badge">UI</div>
+              <h3>Frontend Development</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag">HTML5 / CSS3</span>
+              <span class="tag">JavaScript (ES6+)</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag highlight">React.js</span>
+              <span class="tag highlight">Next.js</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Redux Toolkit</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category glass">
+            <div class="skill-header">
+              <div class="badge-icon backend-badge">API</div>
+              <h3>Backend & APIs</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag highlight">Node.js</span>
+              <span class="tag highlight">Express.js</span>
+              <span class="tag">RESTful APIs</span>
+              <span class="tag">JWT Authentication</span>
+              <span class="tag">Python</span>
+              <span class="tag">C / C++</span>
+              <span class="tag">MVC Architecture</span>
+            </div>
+          </div>
+
+          <!-- Database & DevOps -->
+          <div class="skill-category glass">
+            <div class="skill-header">
+              <div class="badge-icon db-badge">DB</div>
+              <h3>Databases & Cloud</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag highlight">MongoDB</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Mongoose ORM</span>
+              <span class="tag">Prisma ORM</span>
+              <span class="tag">Git & GitHub</span>
+              <span class="tag">Vercel & Render</span>
+              <span class="tag">Postman</span>
+            </div>
+          </div>
+
+          <!-- Core CS & Fundamentals -->
+          <div class="skill-category glass">
+            <div class="skill-header">
+              <div class="badge-icon cs-badge">CS</div>
+              <h3>Computer Science Core</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="tag">Data Structures</span>
+              <span class="tag">Algorithms</span>
+              <span class="tag">OOP Concepts</span>
+              <span class="tag">DBMS</span>
+              <span class="tag">Operating Systems</span>
+              <span class="tag">Computer Networks</span>
+              <span class="tag">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">Featured Work</p>
+          <h2 class="section-title">Projects I've Built</h2>
+          <p class="section-sub">A curated selection of my full-stack web applications and client projects.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend & APIs</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card glass" data-category="fullstack">
+            <div class="project-preview">
+              <div class="project-mockup devconnect-mockup">
+                <div class="mockup-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-code">&lt;DevConnect /&gt;</div>
+                  <p class="mockup-sub">Real-Time Developer Social & Collab Platform</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Full Stack MERN</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title">DevConnect Platform</h3>
+              <p class="project-description">
+                A social networking platform for student developers featuring real-time messaging, post interactions, project feeds, and user profile management.
+              </p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>Socket.io</span>
+                <span>Tailwind</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <span>Code</span>
+                </a>
+                <a href="#" class="link-item demo-link" onclick="alert('Demo link: replace with your deployed URL')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>Live Demo</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass" data-category="fullstack">
+            <div class="project-preview">
+              <div class="project-mockup campus-mockup">
+                <div class="mockup-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-code">&lt;CampusFlow /&gt;</div>
+                  <p class="mockup-sub">College ERP & Student Management Portal</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Full Stack Next.js</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title">CampusFlow College ERP</h3>
+              <p class="project-description">
+                Centralized academic portal for BCA students and faculty managing attendance records, assignment submissions, notices, and internal assessment tracking.
+              </p>
+              <div class="project-tech">
+                <span>Next.js 14</span>
+                <span>TypeScript</span>
+                <span>PostgreSQL</span>
+                <span>Prisma</span>
+                <span>NextAuth</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <span>Code</span>
+                </a>
+                <a href="#" class="link-item demo-link" onclick="alert('Demo link: replace with your deployed URL')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>Live Demo</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass" data-category="frontend">
+            <div class="project-preview">
+              <div class="project-mockup taskforge-mockup">
+                <div class="mockup-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-code">&lt;TaskForge /&gt;</div>
+                  <p class="mockup-sub">Kanban Project & Sprint Management App</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Frontend React</span>
+                <span class="project-year">2023</span>
+              </div>
+              <h3 class="project-title">TaskForge Kanban</h3>
+              <p class="project-description">
+                Interactive productivity board with drag-and-drop task workflow, filterable tags, priority matrices, and persistent browser storage.
+              </p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Redux Toolkit</span>
+                <span>Tailwind CSS</span>
+                <span>dnd-kit</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <span>Code</span>
+                </a>
+                <a href="#" class="link-item demo-link" onclick="alert('Demo link: replace with your deployed URL')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span>Live Demo</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card glass" data-category="backend">
+            <div class="project-preview">
+              <div class="project-mockup api-mockup">
+                <div class="mockup-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-code">GET /api/v1/auth</div>
+                  <p class="mockup-sub">Scalable Authentication & Microservices Engine</p>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-type">Backend & REST API</span>
+                <span class="project-year">2023</span>
+              </div>
+              <h3 class="project-title">Secure Auth & RBAC Microservice</h3>
+              <p class="project-description">
+                Robust role-based access control API system with JWT access/refresh token rotation, rate limiting, password hashing (bcrypt), and automated email verification.
+              </p>
+              <div class="project-tech">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>JWT</span>
+                <span>Redis</span>
+                <span>Postman</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  <span>Code</span>
+                </a>
+                <a href="#" class="link-item demo-link" onclick="alert('API Docs available on GitHub!')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  <span>Docs</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">Academic Background</p>
+          <h2 class="section-title">Education & Learning Journey</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item glass">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-degree">Bachelor of Computer Applications (BCA)</h3>
+                  <span class="timeline-institution">University / College Department</span>
+                </div>
+                <span class="timeline-date">2023 - Present</span>
+              </div>
+              <p class="timeline-desc">
+                Focused on core computer science foundations, object-oriented programming, data structures, relational database management, and hands-on software development laboratories.
+              </p>
+              <div class="coursework-tags">
+                <span class="badge">Data Structures</span>
+                <span class="badge">Web Technologies</span>
+                <span class="badge">Database Systems</span>
+                <span class="badge">OOP in C++/Java</span>
+                <span class="badge">Computer Networks</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item glass">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-degree">Higher Secondary Education</h3>
+                  <span class="timeline-institution">The Horizon School</span>
+                </div>
+                <span class="timeline-date">Completed</span>
+              </div>
+              <p class="timeline-desc">
+                Completed higher secondary schooling with a solid academic foundation in Computer Fundamentals, Mathematics, and Analytical Problem Solving, establishing the groundwork for software development.
+              </p>
+              <div class="coursework-tags">
+                <span class="badge">Computer Fundamentals</span>
+                <span class="badge">Mathematics</span>
+                <span class="badge">Analytical Skills</span>
+                <span class="badge">Academic Excellence</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item glass">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-degree">Full Stack Web Development Specialization</h3>
+                  <span class="timeline-institution">Self-Directed & Project Labs</span>
+                </div>
+                <span class="timeline-date">2023 - 2024</span>
+              </div>
+              <p class="timeline-desc">
+                Mastered modern full-stack web architectures: building end-to-end applications with React, Node.js, Express, MongoDB, RESTful API design, authentication, and deployment automation.
+              </p>
+              <div class="coursework-tags">
+                <span class="badge">MERN Stack</span>
+                <span class="badge">TypeScript</span>
+                <span class="badge">Git Version Control</span>
+                <span class="badge">Cloud Hosting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">Get in Touch</p>
+          <h2 class="section-title">Let's Connect & Build Together</h2>
+          <p class="section-sub">
+            Whether you have an internship opportunity, a freelance project, or just want to chat about tech, my inbox is always open!
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+          <!-- Info Column -->
+          <div class="contact-info glass">
+            <h3>Contact Details</h3>
+            <p>Feel free to reach out through any of these platforms:</p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:nitinkothiyal@example.com" class="contact-val" id="email-text">nitinkothiyal@example.com</a>
+                </div>
+                <button class="copy-btn" id="copy-email-btn" title="Copy email">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span class="contact-val">India (Open to Remote Worldwide)</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                </div>
+                <div>
+                  <span class="contact-label">Response Time</span>
+                  <span class="contact-val">Within 24 Hours</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social-grid">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-chip">
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-chip">
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-chip">
+                <span>Twitter / X</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form Column -->
+          <form class="contact-form glass" id="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Internship Opportunity / Project Inquiry" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Hi Nitin, I'd like to talk about..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              <span>Send Message</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="current-year">2024</span> Nitin Kothiyal. Crafted with passion & clean code.</p>
+      <a href="#hero" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Message sent successfully!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
